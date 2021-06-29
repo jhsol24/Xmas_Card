@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wisenut.act.mapper.ActMapper">
+
+	<resultMap type="com.wisenut.server.vo.ServerVo" id="serverVo"></resultMap> 
+ 	<resultMap type="com.wisenut.act.vo.ActVo" id="actVo"></resultMap>
+	<parameterMap type="com.wisenut.act.vo.ActVo" id="pactVo"></parameterMap>
+
+	<select id="getServer" parameterType="String" resultMap="serverVo">
+	 SELECT CFSV_ID
+		  , CFSV_IP
+		  , CFSV_PORT
+		  , CFSV_NM
+		  , CFSV_DESC
+		  , NVL(CFSV_REG_DT, SYSDATE)
+		  , NVL(CFSV_UPD_DT, SYSDATE) 
+		  , CFSV_STD_INDIR
+		  , CFSV_ANAL_INDIR
+		  , CFSV_ANAL_OUTDIR
+	   FROM WISE_CF_SERVER
+ 	  WHERE 1=1
+     <if test="_parameter != null and _parameter != '' ">
+	    AND CFSV_ID = #{_parameter}
+     </if>
+     ORDER BY CFSV_ID DESC
+     
+	</select>
+
+
+</mapper>
