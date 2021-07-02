@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- conversion:ibatis2mybatis. -->
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <!DOCTYPE sqlMapConfig PUBLIC "-//www.ibatis.com//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd"> -->
+	<!-- settings is default value -->
+
+		<configuration>
+			<!--  jdbcType=VARCHAR tibero, oracle null 처리  -->
+			<settings name="cacheEnabled" value="false"/> 
+			<settings name="jdbcTypeForNull" value="NULL"/> 
+			
+			<!--  jdbcType(ORACLECURSOR, NUMBER) -->
+			<settings name="jdbcType" value="CURSOR"/> 
+			<settings name="jdbcType" value="NUMERIC"/> 
+			
+			<!--  INIT else -->
+			<settings useStatementNamespaces="true"/>
+			<!-- <settings useStatementNamespaces="true"/> -->
+			<!-- resource Study.cfSql.xml2cfMgr-->
+			<mappers resource="table/tibero_create_tables.sql" />  
+		</configuration>
