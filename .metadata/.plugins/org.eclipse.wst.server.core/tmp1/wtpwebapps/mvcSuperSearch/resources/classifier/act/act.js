@@ -1,1 +1,0 @@
-const CONTEXT_PATH = "";

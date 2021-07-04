@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;mvcSuperSearch&apos; to &apos;mvcSuperSearch_hs&apos;" description="Rename resource &apos;mvcSuperSearch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/mvcSuperSearch" name="mvcSuperSearch_hs" stamp="1624956568656" updateReferences="true"/>
-</session>
